@@ -1,0 +1,44 @@
+.card{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(19, 18, 18, 0.4);
+    background: aliceblue;
+    color: #555555;
+}
+
+.card:hover{
+    transition: 0.4s;
+    box-shadow: 0 10px 10px rgba(19, 18, 18, 0.4);
+}
+
+.card > img{
+    width: 100%;
+    border-start-start-radius: 10px;
+    border-start-end-radius: 10px;
+    cursor: pointer;
+}
+
+.info{
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.rating{
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+.title{
+    font-weight: 700;
+}
+
+.title:hover{
+    cursor: pointer;
+    color: dodgerblue;
+}

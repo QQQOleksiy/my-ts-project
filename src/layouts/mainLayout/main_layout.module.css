@@ -1,0 +1,14 @@
+.main{
+    display: flex;
+    min-height: 90vh;
+}
+
+.genres{
+    width: 10%;
+    min-width: 120px;
+    box-shadow: 0 2px 8px rgba(19, 18, 18, 0.4);
+}
+
+.outlet{
+    width: 90%;
+}

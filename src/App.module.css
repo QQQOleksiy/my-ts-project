@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+
+}
+
+.light {
+    background: aliceblue;
+    font-family: Calibri, serif;
+    transition: 0.4s;
+}
+.dark {
+    background: #0a2241;
+    font-family: Calibri, serif;
+    transition: 0.4s;
+}
