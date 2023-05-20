@@ -20,11 +20,17 @@ const MoviesByName: FC = () => {
         dispatch(movieActions.getMoviesByName(name))
     }, [dispatch, name])
 
-    return (
-        <div>
-            {loading ? <Loader/> :moviesByName.length !== 0 ? moviesByName.map(value => <OneMovieByName key={value.id} id={value.id} name={value.name}/>) : <div className={css.not_found_movies}>Not Found Movies</div>}
-        </div>
-    );
+    if (loading){
+        return (
+            <Loader/>
+        )
+    }else {
+        return (
+            <div>
+                {moviesByName.length !== 0 ? moviesByName.map(value => <OneMovieByName key={value.id} id={value.id} name={value.name}/>) : <div className={css.not_found_movies}>Not Found Movies</div>}
+            </div>
+        );
+    }
 };
 
 export default MoviesByName;

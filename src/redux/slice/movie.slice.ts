@@ -119,8 +119,11 @@ const slice = createSlice({
             .addCase(getMoviesByName.fulfilled, (state, action) => {
                 state.moviesByName = action.payload
             })
-            .addCase(getDetailsMovie.pending, (state) => {
+            .addCase(getDetailsMovie.pending, state => {
                 state.detailsMovie = null
+            })
+            .addCase(getDetailsMovie.rejected, state => {
+                state.loading = false
             })
             .addMatcher(isPending(getAll, getMoviesByGenre, getDetailsMovie, getMoviesByName), (state, action) => {
                 state.loading = true
