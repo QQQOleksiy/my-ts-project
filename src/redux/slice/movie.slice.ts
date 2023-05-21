@@ -1,4 +1,4 @@
-import {createAsyncThunk, createSlice, isFulfilled, isPending} from "@reduxjs/toolkit";
+import {createAsyncThunk, createSlice, isFulfilled, isPending, isRejected} from "@reduxjs/toolkit";
 import {AxiosError} from "axios";
 
 import {IDetails, IGenre, IMovie, ISearchMovie} from "../../interfaces";
@@ -122,7 +122,7 @@ const slice = createSlice({
             .addCase(getDetailsMovie.pending, state => {
                 state.detailsMovie = null
             })
-            .addCase(getDetailsMovie.rejected, state => {
+            .addMatcher(isRejected(), state => {
                 state.loading = false
             })
             .addMatcher(isPending(getAll, getMoviesByGenre, getDetailsMovie, getMoviesByName), (state, action) => {
