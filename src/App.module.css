@@ -1,15 +1,138 @@
 body {
     margin: 0;
-
 }
 
 .light {
     background: aliceblue;
     font-family: Calibri, serif;
     transition: 0.4s;
+    color: #333333;
 }
+
+.light a {
+    color: #0066cc;
+}
+
+.light button {
+    background: #ffffff;
+    color: #333333;
+    border: 1px solid #cccccc;
+}
+
+.light input {
+    background: #ffffff;
+    border: 1px solid #cccccc;
+    color: #333333;
+}
+
+.light .card {
+    background: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 .dark {
     background: #0a2241;
     font-family: Calibri, serif;
     transition: 0.4s;
+    color: #e0e0e0;
+}
+
+.dark a {
+    color: #66b3ff;
+}
+
+.dark button {
+    background: #1a3555;
+    color: #ffffff;
+    border: 1px solid #2a4565;
+}
+
+.dark input {
+    background: #1a3555;
+    border: 1px solid #2a4565;
+    color: #ffffff;
+}
+
+.dark .card {
+    background: #1a3555;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Спільні стилі для інтерактивних елементів */
+button {
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+input {
+    padding: 8px;
+    border-radius: 4px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    box-shadow: 0 0 0 2px rgba(102, 179, 255, 0.3);
+}
+
+.card {
+    padding: 16px;
+    margin: 8px;
+    border-radius: 8px;
+    transition: 0.4s;
+}
+
+/* Додаткові корисні класи */
+.dark .text-muted {
+    color: #8b9cb3;
+}
+
+.light .text-muted {
+    color: #666666;
+}
+
+.dark ::placeholder {
+    color: #8b9cb3;
+}
+
+.light ::placeholder {
+    color: #999999;
+}
+
+/* Стилі для підсвічування тексту */
+.dark ::selection {
+    background: #264773;
+    color: #ffffff;
+}
+
+.light ::selection {
+    background: #cce5ff;
+    color: #000000;
+}
+
+/* Стилі для скроллбару */
+.dark ::-webkit-scrollbar {
+    width: 10px;
+    background: #0a2241;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: #1a3555;
+    border-radius: 5px;
+}
+
+.light ::-webkit-scrollbar {
+    width: 10px;
+    background: #f0f8ff;
+}
+
+.light ::-webkit-scrollbar-thumb {
+    background: #cccccc;
+    border-radius: 5px;
 }
